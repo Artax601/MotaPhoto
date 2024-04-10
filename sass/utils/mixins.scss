@@ -1,0 +1,133 @@
+@mixin debug {
+    border: 1px solid red;
+}
+
+@mixin link-styles($colorUnderline, $color, $fontSize, $textTransform, $height) {
+    color: $color;
+    font-family: "Space Mono";
+    font-size: $fontSize;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: $textTransform;
+    position: relative;
+    text-decoration: none;
+
+    &:hover {
+        font-weight: 700;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: $height;
+        border-radius: 0px; // 4px
+        background-color: $colorUnderline;
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover::before {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+}
+
+// mixin du bouton
+@mixin btn-styles() {
+    display: flex;
+    width: 272px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    background: #d8d8d8;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.02);
+    color: #000;
+    font-family: "Space Mono";
+    font-size: 0.75rem;
+    transition: 0.3s;
+
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    &:hover {
+        background: #000;
+        color: #fff;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            Mixins pour la Modal                            */
+/* -------------------------------------------------------------------------- */
+
+$primary-color: #000;
+$secondary-color: #313144;
+$error-color: red;
+$light-gray-color: #d8d8d8;
+$dark-gray-color: #b8bbc2;
+$max-width: 668px;
+$max-width-mobile: 468px;
+
+$poppins-font: "Poppins", sans-serif;
+$space-mono-font: "Space Mono";
+
+$base-font-size: 0.75rem;
+$base-line-height: normal;
+$base-padding-bottom: 3px;
+
+$border-radius: 8px;
+
+@mixin flex-center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin mobile-modifications() {
+    @media screen and (max-width: $max-width) {
+        @content;
+    }
+}
+@mixin mobile-modifications-mobile() {
+    @media screen and (max-width: $max-width-mobile) {
+        @content;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                          Mixin pour le Single Page                         */
+/* -------------------------------------------------------------------------- */
+
+$related-photo-width-height: (
+    default: (
+        806px,
+        702.5px
+    ),
+    1796px: (
+        564px,
+        495px
+    ),
+    1410px: (
+        474px,
+        413.25px
+    ),
+    1240px: (
+        403px,
+        351.25px
+    ),
+    1070px: (
+        349.5px,
+        304.5px
+    ),
+    940px: (
+        317.66px,
+        278.8px
+    )
+);

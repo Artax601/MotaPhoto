@@ -1,0 +1,25 @@
+footer {
+    min-height: 80px;
+    border-top: 1px solid black;
+    padding: 1px 0px 8px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 86px;
+
+        @media screen and (max-width: 668px) {
+            flex-direction: column;
+            gap: 24px;
+            padding: 43px 0;
+        }
+    }
+
+    a {
+        @include link-styles(#e00000, #000000, 1rem, uppercase, 2px);
+    }
+}

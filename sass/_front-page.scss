@@ -1,0 +1,264 @@
+.hero-header {
+    &__image {
+        width: 100%;
+        height: 95vh;
+        @media screen and (max-width: 375px) {
+            height: auto;
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            @media screen and (max-width: 375px) {
+                width: 100%;
+                height: 40%;
+            }
+        }
+    }
+
+    &__title {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        z-index: 1;
+        font-family: Space Mono;
+        font-size: 6rem;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        color: transparent;
+        -webkit-text-stroke: 3px white;
+        @media screen and (max-width: 768px) {
+            font-size: 3rem;
+            -webkit-text-stroke: 1.5px white;
+        }
+        @media screen and (max-width: 375px) {
+            transform: translate(0%, -30vh);
+            font-size: 1.72rem;
+            -webkit-text-stroke: 1px white;
+        }
+    }
+}
+
+.photo-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 0fr);
+        grid-gap: 20px;
+        justify-content: center;
+        @media screen and (max-width: 768px) {
+            grid-template-columns: repeat(1, 0fr);
+        }
+        a > img {
+            $default_size: map-get($related-photo-width-height, default);
+            width: nth($default_size, 1);
+            height: nth($default_size, 2);
+            object-fit: cover;
+            object-position: unset;
+            @media screen and (max-width: 1768px) {
+                width: 564px;
+                height: 494px;
+            }
+            @media screen and (max-width: 1440px) {
+                width: 500px;
+                height: 440px;
+            }
+
+            @media screen and (max-width: 1000px) {
+                width: 317px;
+                height: 278px;
+            }
+        }
+    }
+
+    &__button {
+        @include btn-styles();
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Selecteur de trie                             */
+/* -------------------------------------------------------------------------- */
+
+/* mixin de font */
+@mixin font-select {
+    color: rgb(49, 49, 68);
+    font-family: Poppins;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.13rem;
+    text-align: left;
+}
+
+.selector-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__group {
+        display: flex;
+        gap: 36px;
+
+        @media screen and (max-width: 560px) {
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+}
+
+.selector-container__select {
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        background-image: url("./assets/images/arrow.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: transform 0.3s ease;
+        pointer-events: none;
+    }
+
+    &.rotate::after {
+        transform: rotate(180deg) translateY(50%);
+    }
+}
+select {
+    appearance: none;
+    cursor: pointer;
+    @include font-select;
+    // * Selecteur de trie
+    width: 260px;
+    height: 42px;
+    display: flex;
+    padding: 0px 18px;
+    // * Background
+    border: 1.3px solid rgb(184, 187, 194);
+    border-radius: 8px;
+    background: rgb(255, 255, 255);
+
+    &::-ms-expand {
+        display: none;
+    }
+
+    &:focus {
+        outline: 1.3px solid rgb(33, 90, 255);
+    }
+
+    option {
+        all: unset;
+
+        font-family: Poppins;
+        color: inherit;
+        background-color: white;
+    }
+}
+
+.selector.rotate::after {
+    transform: rotate(180deg) translateY(50%) !important;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   SELECT2                                  */
+/* -------------------------------------------------------------------------- */
+
+.select2 {
+    @include font-select;
+    text-transform: uppercase;
+
+    .selector-container {
+        width: 260px;
+        height: 42px;
+        padding: 0px 18px;
+        border: 1.3px solid rgb(184, 187, 194);
+        border-radius: 8px;
+        background: rgb(255, 255, 255);
+
+        &:focus {
+            outline: 1.3px solid rgb(33, 90, 255);
+        }
+    }
+
+    &-categories-result {
+        @include font-select;
+
+        li {
+            @include font-select;
+        }
+    }
+}
+
+.select2-selection__arrow {
+    display: none !important;
+}
+
+.custom-dropdown {
+    @include font-select;
+    border: none;
+}
+
+.custom-container {
+    width: 300px;
+}
+
+body {
+    margin: 0;
+}
+
+.select2-container .select2-dropdown .select2-results ul .select2-results__option--highlighted[aria-selected] {
+    transition: 0.3s ease;
+
+    background-color: #e00000;
+}
+
+.select2-container--default .select2-results__option--selected {
+    background-color: #fe5858 !important;
+    color: #fff;
+}
+.select2-container .select2-dropdown .select2-results ul .select2-results__option {
+    padding: 11px 24px 11px 24px;
+}
+
+.select2-container--focus .select2-selection {
+    border: 1.3px solid rgb(33, 90, 255);
+}
+
+.select2-container--open .select2-dropdown--below {
+    border: none !important;
+    box-shadow: 0px 0px 10px -1px rgba(0, 0, 0, 0.1);
+}
+
+.select2.select2-container.select2-container--open .select2-selection {
+    border: 2px solid rgb(33, 90, 255);
+}
+
+.select2.select2-container {
+    width: 260px !important;
+}
+
+.select2.select2-container .select2-selection {
+    border: 1.3px solid rgb(184, 187, 194);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    height: 42px !important;
+    outline: none !important;
+    transition: all 0.15s ease-in-out;
+    display: flex !important;
+    align-items: center;
+    padding-left: 8px;
+}

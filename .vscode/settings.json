@@ -1,0 +1,5 @@
+{
+  "phpfmt.exclude": ["StripSpaces"],
+  "phpfmt.indent_with_space": 4,
+  "cSpell.words": ["Decroissant", "recentes"]
+}

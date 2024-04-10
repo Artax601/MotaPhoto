@@ -1,0 +1,20 @@
+0000000000000000000000000000000000000000 dfc2b7d02587eb1bec23e8168cb8c21a192e8bc9 Artax601 <artaxw1@gmail.com> 1705614321 +0100	commit (initial): Initial commit
+dfc2b7d02587eb1bec23e8168cb8c21a192e8bc9 102255c3e37e6b861d4307b75e6d516ecd99210f Artax601 <artaxw1@gmail.com> 1705615265 +0100	commit: Adding basic information to the theme
+102255c3e37e6b861d4307b75e6d516ecd99210f d62130f5548eab46c7b34a4b769561bf209f64a1 Artax601 <artaxw1@gmail.com> 1705676007 +0100	commit: Mise en place du header & burger menu
+d62130f5548eab46c7b34a4b769561bf209f64a1 7a2f1e522b404652f591f5bc5524783a191bbc09 Artax601 <artaxw1@gmail.com> 1705705689 +0100	commit: feat: Ajout du footer
+7a2f1e522b404652f591f5bc5524783a191bbc09 92a49c9a2b33a7ee50c8b7bcaa2fcc058eaa41f6 Artax601 <artaxw1@gmail.com> 1705780439 +0100	commit: feat: Ajout du modal pour le menu Contact
+92a49c9a2b33a7ee50c8b7bcaa2fcc058eaa41f6 9294cf8b14a7c15f48578014f775c9fe413768a6 Artax601 <artaxw1@gmail.com> 1705928206 +0100	commit: feat: Ajout de la zone de contenu
+9294cf8b14a7c15f48578014f775c9fe413768a6 8fe44eab489202fc027c26c18255c10544924739 Artax601 <artaxw1@gmail.com> 1705956540 +0100	commit: feat : Ajout des variables pour les taxonomies
+8fe44eab489202fc027c26c18255c10544924739 709d0fdd81ff20dac937362bf4d456b44309a4fd Artax601 <artaxw1@gmail.com> 1706046297 +0100	commit: feat : Ajout de la logique des passages des photos
+709d0fdd81ff20dac937362bf4d456b44309a4fd 13bfbc276fdf522ccbd16b4e56dd58784f3b1cfc Artax601 <artaxw1@gmail.com> 1706117588 +0100	commit: feat: Script pour la prévisualisation des photos
+13bfbc276fdf522ccbd16b4e56dd58784f3b1cfc 2a56f1d1f0f046cf70138ce9f0be216c19e505ff Artax601 <artaxw1@gmail.com> 1707225573 +0100	commit: feat: Affiche les photos de la même catégorie
+2a56f1d1f0f046cf70138ce9f0be216c19e505ff d5015592273af04a1c632e6ed37f71b8cf39dd2e Artax601 <artaxw1@gmail.com> 1707253607 +0100	commit: feat: version responsive du Single Page
+d5015592273af04a1c632e6ed37f71b8cf39dd2e 7033f9b369c2d747fab3f1af89ca39ab766540ee Artax601 <artaxw1@gmail.com> 1707260383 +0100	commit: feat: Intégration du héro + Script
+7033f9b369c2d747fab3f1af89ca39ab766540ee 8ab864da5a889ecb8d998d47de2a07e7e25a9cd4 Artax601 <artaxw1@gmail.com> 1707342314 +0100	commit: Création/modification du fichier du modèle partiel
+8ab864da5a889ecb8d998d47de2a07e7e25a9cd4 2ad5d11b4e7705822f04a0addd562c86acfc75a6 Artax601 <artaxw1@gmail.com> 1707837493 +0100	commit: feat: Ajout du script AJAX
+2ad5d11b4e7705822f04a0addd562c86acfc75a6 57db023b6a0d8e1fd2a32237399ce00f05eb5313 Artax601 <artaxw1@gmail.com> 1707839531 +0100	commit: fix: Correction des erreurs console des variables
+57db023b6a0d8e1fd2a32237399ce00f05eb5313 6c1398f687db945da45af339b54ab4587e910701 Artax601 <artaxw1@gmail.com> 1708077624 +0100	commit: feat: Ajout script AJAX filtrage DESC-> ASC
+6c1398f687db945da45af339b54ab4587e910701 19d67af1fc739855a4340026ee27fa26d153db6c Artax601 <artaxw1@gmail.com> 1708456878 +0100	commit: feat: filtrage Type & Catégorie
+19d67af1fc739855a4340026ee27fa26d153db6c 8dff1215e3f74c811b15bb26932724044c3f5419 Artax601 <artaxw1@gmail.com> 1709551653 +0100	commit: 2
+8dff1215e3f74c811b15bb26932724044c3f5419 8829d2f0529c9713c64765756f64562889205f7b Artax601 <125279041+Artax601@users.noreply.github.com> 1711743387 +0100	commit: Ap commit #1
+8829d2f0529c9713c64765756f64562889205f7b a213627c639bd0c2dd7cede120b245c338809215 Artax601 <125279041+Artax601@users.noreply.github.com> 1711817629 +0100	commit: commit #1

@@ -1,0 +1,19 @@
+/*!
+Theme Name: Moto Photo
+Theme URI: http://motophoto.com
+Author: Admin
+Description: Thème WordPress conçu pour une photographe freelance.
+Version: 1.6.3
+*/
+
+@import "modules/header";
+
+@import "modules/footer.scss";
+
+@import "modules/modal.scss";
+
+@import "single-photo.scss";
+
+@import "lightbox.scss";
+
+@import "front-page.scss";
